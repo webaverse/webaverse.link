@@ -53,7 +53,7 @@ const hdkey = hdkeySpec.default;
       devicesEl.classList.add('hidden');
       ok2El.classList.remove('hidden');
 
-      window.location.href = `https://app.websaverse.com`;
+      window.location.href = `https://app.webaverse.com`;
     } else {
       console.warn(res.status);
     }
