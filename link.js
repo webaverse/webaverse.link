@@ -20,9 +20,7 @@ const hdkey = hdkeySpec.default;
   if (mnemonic) {
     const wallet = hdkey.fromMasterSeed(bip39.mnemonicToSeedSync(mnemonic)).derivePath(`m/44'/60'/0'/0/0`).getWallet();
     const address = wallet.getAddressString();
-    // headerMessageEl.innerText = `Logged in as: ${address}`;
 
-    headerMessageEl.classList.add('hidden');
     device1El.classList.remove('disabled');
     device1El.addEventListener('click', async () => {
       const res = await fetch(`https://login.exokit.org?autoip=src&mnemonic=${mnemonic}`, {
@@ -43,6 +41,8 @@ const hdkey = hdkeySpec.default;
         failEl.classList.remove('hidden');
       }
     });
+  } else {
+    headerMessageEl.classList.remove('hidden');
   }
   device2El.addEventListener('click', async () => {
     const res = await fetch(`https://login.exokit.org?autoip=dst`, {
