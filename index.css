@@ -6,7 +6,7 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
-header {
+h1, header {
   text-align: center;
 }
 .devices {
@@ -54,4 +54,13 @@ header {
 }
 .devices > .device > .description {
   font-size: 20px;
+}
+.wrap {
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
 }

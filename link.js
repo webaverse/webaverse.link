@@ -8,9 +8,14 @@ const hdkey = hdkeySpec.default;
   console.log('got', loginToken);
   const mnemonic = loginToken ? loginToken.mnemonic : null;
 
+  const headerEl = document.getElementById('header');
   const headerMessageEl = document.getElementById('header-message');
+  const devicesEl = document.getElementById('devices');
   const device1El = document.getElementById('device-1');
   const device2El = document.getElementById('device-2');
+  const ok1El = document.getElementById('ok-1');
+  const ok2El = document.getElementById('ok-2');
+  const failEl = document.getElementById('fail');
 
   if (mnemonic) {
     const wallet = hdkey.fromMasterSeed(bip39.mnemonicToSeedSync(mnemonic)).derivePath(`m/44'/60'/0'/0/0`).getWallet();
@@ -25,6 +30,10 @@ const hdkey = hdkeySpec.default;
       if (res.ok) {
         const j = await res.json();
         console.log('got auto login src', j);
+
+        headerEl.classList.add('hidden');
+        devicesEl.classList.add('hidden');
+        ok1El.classList.remove('hidden');
       } else {
         console.warn(res.status);
       }
@@ -39,6 +48,12 @@ const hdkey = hdkeySpec.default;
       console.log('got auto login dst', j);
       const {mnemonic} = j;
       await storage.set('loginToken', {mnemonic});
+
+      headerEl.classList.add('hidden');
+      devicesEl.classList.add('hidden');
+      ok2El.classList.remove('hidden');
+
+      window.location.href = `https://app.websaverse.com`;
     } else {
       console.warn(res.status);
     }

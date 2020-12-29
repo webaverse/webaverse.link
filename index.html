@@ -18,12 +18,12 @@
     <!-- <script type="module" src="world.js"></script> -->
   </head>
   <body>
-    <header>
-      <h1>Webaverse auto-login</h1>
+    <h1>Webaverse auto-login</h1>
+    <header id=header>
       <p id=header-message>Not logged in</p>
       <p>This will log you in based on your IP address.</p>
     </header>
-    <div class=devices>
+    <div class=devices id=devices>
       <div class="device disabled" id=device-1>
         <i class="fa fa-laptop"></i>
         <div class=label>Step 1 (computer)</div>
@@ -34,6 +34,18 @@
         <i class="fa fa-mobile"></i>
         <div class=label>Step 2 (device)</div>
         <div class=description>This is my headset or phone.<br>Log me in.</div>
+      </div>
+    </div>
+    <div class=wrap>
+      <div class="ok hidden" id=ok-1>
+        Ok, now go to <a>https://webaverse.link</a> you other device.<br>
+        This will expire in 1 min.<br>
+      </div>
+      <div class="ok hidden" id=ok-2>
+        It worked! Redirecting...
+      </div>
+      <div class="ok hidden" id=fail>
+        An error ocurred. Try again?
       </div>
     </div>
     <script src="link.js" type=module></script>
