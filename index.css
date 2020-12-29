@@ -8,7 +8,7 @@ body {
   align-items: center;
 }
 header {  
-  width: 460px;
+  width: 480px;
 }
 .devices {
   display: flex;
@@ -70,7 +70,7 @@ a {
 }
 .wrap {
   display: flex;
-  width: 460px;
+  width: 480px;
   margin: 0 auto;
   flex-direction: column;
 }
