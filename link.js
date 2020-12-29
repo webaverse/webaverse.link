@@ -16,8 +16,12 @@ import storage from './storage.js';
           mnemonic: 'lol',
         }),
       });
-      const j = await res.json();
-      console.log('got auto login src', j);
+      if (res.ok) {
+        const j = await res.json();
+        console.log('got auto login src', j);
+      } else {
+        console.warn(res.status);
+      }
     });
   }
   device2El.addEventListener('click', async () => {
