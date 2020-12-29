@@ -8,13 +8,7 @@ body {
   align-items: center;
 }
 header {  
-  width: 440px;
-}
-.header-message {
-  display: flex;
-  padding: 10px 20px;
-  background-color: #FFFFFF10;
-  border-radius: 5px;
+  width: 450px;
 }
 .devices {
   display: flex;
@@ -76,7 +70,7 @@ a {
 }
 .wrap {
   display: flex;
-  width: 440px;
+  width: 450px;
   margin: 0 auto;
   flex-direction: column;
 }
