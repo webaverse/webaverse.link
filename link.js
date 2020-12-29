@@ -1,4 +1,9 @@
-import * as storage from './storage.js';
+import storage from './storage.js';
+
+(async () => {
+  const loginToken = await storage.get('loginToken');
+  console.log('got login token', loginToken);
+})();
 
 document.getElementById('device-1').addEventListener('click', async () => {
   const res = await fetch(`https://login.exokit.org?autoip=src`, {
