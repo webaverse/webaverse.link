@@ -18,67 +18,21 @@
     <!-- <script type="module" src="world.js"></script> -->
   </head>
   <body>
-    <header class=header id=header>
-      <a href="/" class="nav icon">山</a>
-      <nav class="selector nav bar" id=selector>
-        <i class="fa fa-planet-ringed head"></i>
-        <div class=header-label id=header-label>Choose a page...</div>
-        <i class="fa fa-chevron-down tail"></i>
-        <div class=selections id=selections>
-          <a href="run.html" class=selection id=run-mode>
-            <i class="fa fa-play"></i>
-            <div class=wrap>
-              <h3>Run mode</h3>
-              <p>Switch to run mode</p>
-            </div>
-          </a>
-          <a href="edit.html" class=selection id=edit-mode>
-            <i class="fa fa-pencil"></i>
-            <div class=wrap>
-              <h3>Edit mode</h3>
-              <p>You are currently editing this world</p>
-            </div>
-          </a>
-          <a href="browse.html" class=selection>
-            <i class="fa fa-solar-system"></i>
-            <div class=wrap>
-              <h3>Browse packages</h3>
-              <p>Explore the XRPackage registry</p>
-            </div>
-          </a>
-          <a href="help.html" class=selection>
-            <i class="fa fa-book"></i>
-            <div class=wrap>
-              <h3>Documentation</h3>
-              <p>Learn how to make packages and worlds</p>
-            </div>
-          </a>
-        </div>
-      </nav>
-      <div class="buttons right">
-        <nav class="nav full" id=enter-xr-button>
-          <i class="fa fa-vr-cardboard"></i>
-          <span>Enter</span>
-        </nav>
+    <h1>Webaverse auto-login</h1>
+    <p>This will log you in based on your IP address. Choose the device this is:</p>
+    <div class=devices>
+      <div class=device>
+        <i class="fa fa-laptop"></i>
+        <div class=label></div>
+        <div class=description></div>
       </div>
-    </header>
-    <div class=hero>
-      <div class=wrap>
-        <h1>A universe of apps</h1>
-        <p><span class=hi>XRPKs</span> are creative spatial apps that run everywhere.</p>
-        <p>Built and owned by awesome folks like you!</p>
-        <p>It's all open tech: IPFS, Ethereum, WebXR</p>
-        <div class=hero-buttons>
-          <a href="https://xrpackage.org/browse.html" class="hero-button hi">Get XRPKs</a>
-          <a href="https://docs.webaverse.com/docs/creating-an-aug" class=hero-button>Create XRPK</a>
-        </div>
-        <div class=standards-icons>
-          <img src="/img/gltf.svg">
-          <img src="/img/vrm.png">
-          <img src="/img/webxr.png">
-        </div>
+      <i class="fa fa-mobile"></i>
+      <div class=device>
+        <i class="fa fa-phone"></i>
+        <div class=label></div>
+        <div class=description></div>
       </div>
     </div>
-    <script src="app.js" type=module></script>
+    <script src="link.js" type=module></script>
   </body>
 </html>
