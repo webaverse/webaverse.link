@@ -18,20 +18,22 @@
     <!-- <script type="module" src="world.js"></script> -->
   </head>
   <body>
-    <h1>Webaverse auto-login</h1>
-    <p id=header-message></p>
-    <p>This will log you in based on your IP address. Choose the device this is:</p>
+    <header>
+      <h1>Webaverse auto-login</h1>
+      <p id=header-message></p>
+      <p>This will log you in based on your IP address.</p>
+    </header>
     <div class=devices>
       <div class=device id=device-1>
         <i class="fa fa-laptop"></i>
-        <div class=label></div>
-        <div class=description>Step 1: I am already logged in here. Set things up.</div>
+        <div class=label>Step 1 (computer)</div>
+        <div class=description>I am already logged in here.<br>Copy my login.</div>
       </div>
-      <i class="fa fa-mobile"></i>
+      <i class="fa fa-chevron-right"></i>
       <div class=device id=device-2>
-        <i class="fa fa-phone">Step 2: This is my headset or phone. Log me in.</i>
-        <div class=label></div>
-        <div class=description></div>
+        <i class="fa fa-phone"></i>
+        <div class=label>Step 2 (device)</div>
+        <div class=description>This is my headset or phone.<br>Log me in.</div>
       </div>
     </div>
     <script src="link.js" type=module></script>
