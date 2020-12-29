@@ -1,4 +1,5 @@
-import {localstorageHost} from './constants.js';
+const localstorageHost = 'https://localstorage.webaverse.com';
+
 function makePromise() {
   let accept, reject;
   const p = new Promise((a, r) => {
