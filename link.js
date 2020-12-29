@@ -27,15 +27,19 @@ const hdkey = hdkeySpec.default;
       const res = await fetch(`https://login.exokit.org?autoip=src&mnemonic=${mnemonic}`, {
         method: 'POST',
       });
+
+      headerEl.classList.add('hidden');
+      devicesEl.classList.add('hidden');
+
       if (res.ok) {
         const j = await res.json();
         console.log('got auto login src', j);
 
-        headerEl.classList.add('hidden');
-        devicesEl.classList.add('hidden');
         ok1El.classList.remove('hidden');
       } else {
         console.warn(res.status);
+
+        failEl.classList.remove('hidden');
       }
     });
   }
@@ -43,19 +47,23 @@ const hdkey = hdkeySpec.default;
     const res = await fetch(`https://login.exokit.org?autoip=dst`, {
       method: 'POST',
     });
+
+    headerEl.classList.add('hidden');
+    devicesEl.classList.add('hidden');
+
     if (res.ok) {
       const j = await res.json();
       console.log('got auto login dst', j);
       const {mnemonic} = j;
       await storage.set('loginToken', {mnemonic});
 
-      headerEl.classList.add('hidden');
-      devicesEl.classList.add('hidden');
       ok2El.classList.remove('hidden');
 
       window.location.href = `https://app.webaverse.com`;
     } else {
       console.warn(res.status);
+
+      failEl.classList.remove('hidden');
     }
   });
 })();

@@ -55,9 +55,21 @@ h1, header {
 .devices > .device > .description {
   font-size: 20px;
 }
+.big {
+  display: flex;
+  margin: 20px 0;
+  padding: 20px 30px;
+  font-size: 40px;
+  background-color: #FFFFFF10;
+  border-radius: 20px;
+  justify-content: center;
+}
+a {
+  color: #c4005d;
+}
 .wrap {
   display: flex;
-  width: 400px;
+  width: 440px;
   margin: 0 auto;
   flex-direction: column;
 }
