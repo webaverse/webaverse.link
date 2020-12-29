@@ -7,3 +7,18 @@ body {
   overflow-x: hidden;
   text-align: center;
 }
+.devices {
+  display: flex;
+}
+.devices > i {
+  font-size: 20px;
+}
+.devices > .device {
+  display: flex;
+  border: 3px solid;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.devices > .device > i {
+  font-size: 50px;
+}
