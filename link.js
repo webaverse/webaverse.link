@@ -24,7 +24,13 @@ import storage from './storage.js';
     const res = await fetch(`https://login.exokit.org?autoip=dst`, {
       method: 'POST',
     });
-    const j = await res.json();
-    console.log('got auto login dst', j);
+    if (res.ok) {
+      const j = await res.json();
+      console.log('got auto login dst', j);
+      const {mnemonic} = j;
+      await storage.set('loginToken', JSON.stringify({mnemonic}));
+    } else {
+      console.warn(res.status);
+    }
   });
 })();
