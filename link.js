@@ -21,9 +21,6 @@ const hdkey = hdkeySpec.default;
     device1El.addEventListener('click', async () => {
       const res = await fetch(`https://login.exokit.org?autoip=src&mnemonic=${mnemonic}`, {
         method: 'POST',
-        body: JSON.stringify({
-          mnemonic: 'lol',
-        }),
       });
       if (res.ok) {
         const j = await res.json();
